@@ -30,6 +30,11 @@ public class ImportUsers {
                     errores++;
                     System.out.println(System.err + " falta un campo en la línea " + numeroLineas);
                 }
+                else if(sa.length > 3){
+                    numeroLineas++;
+                    errores++;
+                    System.out.println(System.err + " sobra uno o más campos en la línea " + numeroLineas);
+                }
                 else if (isPresent(sa[0], list)) {
                     numeroLineas++;
                     errores++;
